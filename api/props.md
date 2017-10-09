@@ -5,11 +5,6 @@ The SDK automatically passes a number of objects to your components via props. S
 ## Connecting your components
 Components which need access to the SDK props must be _connected_ to the SDK. The [DeskproSDK component](/pages/components/DeskproSDK/) automatically connects the wrapped component.
 
-> **[info] For info**
->
-> Use this for infomation messages. 
-
-
 The `<App />` component in the following example will have all SDK props passed to it because it's wrapped by the `DeskproSDK` component.
 
 ```jsx
