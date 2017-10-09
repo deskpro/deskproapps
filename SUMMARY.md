@@ -4,6 +4,9 @@
 * [API](api.md)
     * [Manifest](api/manifest.md)
     * [Props](api/props.md)
+* [Components](components.md)
+    * [DeskproSDK](/components/deskprosdk.md)
+    
 * [Tutorials](tutorials.md)
     * [Basic](tutorials/basic.md)
     * [Forms](tutorials/form.md)
