@@ -32,7 +32,6 @@ export function runApp(dpapp) {
     document.getElementById('deskpro-app')
   );
 }
-
 ```
 
 ## Props
