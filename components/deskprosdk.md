@@ -16,7 +16,6 @@ export function runApp(dpapp) {
     document.getElementById('deskpro-app')
   );
 }
-
 ```
 
 The app component may also be passed to `DeskproSDK` via the `component` prop.
