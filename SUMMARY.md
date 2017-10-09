@@ -6,7 +6,9 @@
     * [Props](api/props.md)
 * [Components](components.md)
     * [DeskproSDK](/components/deskprosdk.md)
-    
+    * [Routes](/components/routes.md)
+    * [Link](/components/link.md)
+    * [LinkButton](/components/linkbutton.md)
 * [Tutorials](tutorials.md)
     * [Basic](tutorials/basic.md)
     * [Forms](tutorials/form.md)
