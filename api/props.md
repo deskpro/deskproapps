@@ -7,7 +7,7 @@ Components which need access to the SDK props must be _connected_ to the SDK. Th
 
 > **[info] For info**
 >
-> Use this for infomation messages.
+> Use this for infomation messages. 
 
 The `<App />` component in the following example will have all SDK props passed to it because it's wrapped by the `DeskproSDK` component.
 
