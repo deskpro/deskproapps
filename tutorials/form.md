@@ -15,7 +15,7 @@ To follow this tutorial you will need:
 
 ----
 
-### Step 1. Clone the boilerplate
+## Step 1. Clone the boilerplate
 The SDK boilerplate includes the basic app configuration and files to help developers get started writing apps.
 
 ```
@@ -24,7 +24,7 @@ cd form-tutorial
 npm install
 ```
 
-### Step 2. Update the manifest
+## Step 2. Update the manifest
 Edit the app configuration in _package.json_, which can be found in the app root directory. Change the "title" property to "Form Tutorial".
 
 {% label %}package.json{% endlabel %}
@@ -57,7 +57,7 @@ Edit the app configuration in _package.json_, which can be found in the app root
 
 *  The "title" value will be shown in the app toolbar. See the [manifest documentation](/manifest.md) for more information.
 
-### Step 3. Create the settings page
+## Step 3. Create the settings page
 Create a new component with a form.
 
 {% label %}src/main/javascript/PageForm.jsx{% endlabel %}
@@ -136,7 +136,7 @@ export default sdkConnect(PageForm);
 >    The callback passed to `this.props.storage.onSubmitApp` is optional and may be omitted. Simply pass the function to the submit handler using `onSubmit={this.props.storage.onSubmitApp}` when post-processing of the form values is not required.
 
 
-### Step 4. Create the index page
+## Step 4. Create the index page
 Create a new component to display the form values.
 
 {% label %}src/main/javascript/PageIndex.jsx{% endlabel %}
@@ -184,7 +184,7 @@ export default sdkConnect(PageIndex);
 
 * The `PageIndex` component is connected to the SDK using the `sdkConnect` function. Which is required in order to read and write to storage. See the documentation on [connecting components to the SDK](/props/connecting.md) for more information.
 
-### Step 5. Modify the app component
+## Step 5. Modify the app component
 Edit the app component to look like the following code.
 
 {% label %}src/main/javascript/App.jsx{% endlabel %}
@@ -214,7 +214,7 @@ export default App;
 > **[info]**
 > The `App` component is connected to the SDK automatically by the boilerplate, and does _not_ need to be wrapped with `sdkConnect`.
 
-### Step 6. Run the dev server
+## Step 6. Run the dev server
 Make sure DeskPRO is running on your computer, and then from the app root directory run the following command.
 
 ```

@@ -15,7 +15,7 @@ To follow this tutorial you will need:
 
 ----
 
-### Step 1. Clone the boilerplate
+## Step 1. Clone the boilerplate
 The SDK boilerplate includes the basic app configuration and files to help developers get started writing apps.
 
 ```
@@ -24,7 +24,7 @@ cd basic-tutorial
 npm install
 ```
 
-### Step 2. Update the manifest
+## Step 2. Update the manifest
 Edit the app configuration in _package.json_, which can be found in the app root directory. Change the "title" property to "Participants".
 
 {% label %}package.json{% endlabel %}
@@ -49,7 +49,7 @@ Edit the app configuration in _package.json_, which can be found in the app root
 
 *  The "title" value will be shown in the app toolbar. See the [manifest documentation](/manifest.md) for more information.
 
-### Step 3. Modify the app component
+## Step 3. Modify the app component
 Edit the app component to look like the following code.
 
 {% label %}src/main/javascript/App.jsx{% endlabel %}
@@ -86,7 +86,7 @@ export default class App extends React.Component {
 
 * The SDK automatically injects the [tabData](/props/tabdata.md) prop into the component. This prop is a plain object which contains information about the open ticket. The code above iterates over the `tabData.participants` array and displays an avatar for each person.
 
-### Step 4. Modify the app styles
+## Step 4. Modify the app styles
 Modify the stylesheet to look like the following.
 
 {% label %}src/main/sass/index.scss{% endlabel %}
@@ -103,7 +103,7 @@ $dp-styles-font-path: "~deskpro-components/src/styles/fonts/";
 }
 ```
 
-### Step 5. Run the dev server
+## Step 5. Run the dev server
 Make sure DeskPRO is running on your computer, and then from the app root directory run the following command.
 
 ```
