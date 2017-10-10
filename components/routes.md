@@ -2,6 +2,9 @@ Overview
 ========
 The SDK includes a light-weight router which displays different pages within DeskPRO apps. Route locations are defined using simple names instead of addresses, because DeskPRO apps do not use the browser location (URL). The current location is changed by calling [this.props.route.to()](/pages/props/#route) with the name of the new location, or by using the [Link](/pages/components/Link) and [LinkButton](/pages/components/LinkButton) components.
 
+> **[info]**
+> Components using the `Routes` component must be [connected to the SDK](/pages/props/#connecting-your-components) using `sdkConnect` or `DeskproSDK`.
+
 ## Props
 
 ```jsx
@@ -64,6 +67,9 @@ const PageNotFound = () => (
 
 export default PageNotFound;
 ```
+
+> **[info]**
+> The `PageNotFound` component doesn't use the SDK props or `Routes` component, and does not need to be connected using `sdkConnect` or `DeskproSDK`.
 
 Now create the main app component which contains the `Routes`. The `Route` which matches the current location gets rendered. The route with the `defaultRoute` prop renders when no other routes matches the current location.
 
@@ -134,3 +140,5 @@ class PageSettings extends Route.Component {
 
 export default sdkConnect(PageSettings);
 ```
+
+The [Link](/components/link.md) and [LinkButton](/components/linkbutton.md) components may also be used to change routes.

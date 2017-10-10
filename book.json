@@ -1,6 +1,11 @@
 {
-    "plugins": ["alerts", "anchors", "copy-code-button", "codeblock-label", "custom-favicon"],
+    "plugins": ["alerts", "anchors", "copy-code-button", "codeblock-label", "custom-favicon", "scripts"],
     "pluginsConfig": {
-        "favicon": "favicon.png"
+        "favicon": "favicon.png",
+        "scripts": {
+            "files": [
+                "./scripts/site.js"
+            ]
+        }
     }
 }
