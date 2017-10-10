@@ -2,23 +2,18 @@ Overview
 ========
 Every DeskPRO app must include a manifest which contains app properties like the title, storage permissions, and interactions with external APIs. The manifest values may be added to the _package.json_ file or a separate _manifest.json_ file.
 
-## manifest.json
+## package.json
 
-The _manifest.json_ must be saved to the app root directory, and should include the following properties.
+The app configuration should be added to the _package.json_ file using the "deskpro" property.
 
 ```json
 {
+  "name": "deskpro-app",
+  "version": "1.0.0",
+  "description": "App description.",
+  "deskpro": {
     "version": "2.1.0",
-    "appVersion": "1.0.0",
-    "name": "App",
     "title": "App Title",
-    "description": "App description.",
-    "url": "https://github.com/user/app",
-    "author": {
-        "name": "Author Name",
-        "email": "author@app.com",
-        "url": "https://github.com/user"
-    },
     "isSingle": true,
     "scope": "agent",
     "storage": [
@@ -38,6 +33,12 @@ The _manifest.json_ must be saved to the app root directory, and should include 
     "settings": [],
     "deskproApiTags": [],
     "externalApis": []
+  },
+  "dependencies": {
+    "@deskproapps/deskproapps-sdk-core": "^1.0.0",
+    "deskpro-sdk-react": "^1.0.0",
+    "deskpro-components": "^1.0.0"
+  }
 }
 ```
 
@@ -84,20 +85,23 @@ Keep this as an empty list for now
 #### settings
 Keep this as an empty list for now.
 
-----
+## manifest.json
 
-## package.json
-
-The configuration may be added to the _package.json_ file instead of having a separate _manifest.json_. The configuration values must be placed inside the "deskpro" property.
+The _manifest.json_ must be saved to the app root directory, and should include the following properties.
 
 ```json
 {
-  "name": "deskpro-app",
-  "version": "1.0.0",
-  "description": "App description.",
-  "deskpro": {
     "version": "2.1.0",
+    "appVersion": "1.0.0",
+    "name": "App",
     "title": "App Title",
+    "description": "App description.",
+    "url": "https://github.com/user/app",
+    "author": {
+        "name": "Author Name",
+        "email": "author@app.com",
+        "url": "https://github.com/user"
+    },
     "isSingle": true,
     "scope": "agent",
     "storage": [
@@ -117,13 +121,7 @@ The configuration may be added to the _package.json_ file instead of having a se
     "settings": [],
     "deskproApiTags": [],
     "externalApis": []
-  },
-  "dependencies": {
-    "@deskproapps/deskproapps-sdk-core": "^1.0.0",
-    "deskpro-sdk-react": "^1.0.0",
-    "deskpro-components": "^1.0.0"
-  }
 }
 ```
 
-The "appVersion", "name", "description", and "author" values may be omitted from the "deskpro" configuration, as they can be determined by reading the rest of the _package.json_ file.
+Normally the app version, name, description, and author can be determined from the _package.json_. Those values must be added to the stand alone _manifest.json_ using "appVersion", "name", "description", and "author".
