@@ -120,8 +120,3 @@ class PageSettings extends Route.Component {
 
 export default sdkConnect(PageSettings);
 ```
-
-## See also
-* [this.props.route](/pages/props/#route)
-* [Link](/pages/components/Link)
-* [LinkButton](/pages/components/LinkButton)

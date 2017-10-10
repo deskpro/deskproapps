@@ -32,8 +32,8 @@ import analytics from 'redux-analytics';
 const store = configureStore(dpapp, [logger, analytics]);
 ```
 
-!!! note
-    [Thunk](https://github.com/gaearon/redux-thunk) middleware is included by default.
+> **[info]**
+> [Thunk](https://github.com/gaearon/redux-thunk) middleware is included by default.
 
 ## Reducers
 Additional reducers may also be passed to the `configureStore()` function.
@@ -49,8 +49,8 @@ const store = configureStore(dpapp, {
 });
 ```
 
-!!! note
-    The [Redux Form](https://redux-form.com/7.1.0/) reducer is included by default.
+> **[info]**
+> The [Redux Form](https://redux-form.com/7.1.0/) reducer is included by default.
 
 Initial state for the custom reducers may also be passed to the `configureStore()` function.
 
@@ -71,6 +71,7 @@ const store = configureStore(dpapp, reducers, initialState);
 
 The following example uses middleware, reducers, and initial state.
 
+{% label %}src/main/javascript/index.js{% endlabel %}
 ```js
 import ReactDOM from 'react-dom';
 import { DeskproSDK, configureStore } from 'deskpro-sdk-react';
@@ -99,8 +100,9 @@ export function runApp(dpapp) {
 ```
 
 ## Dispatch
-Components which have been [connected to the SDK](/pages/props/#connecting-your-components) will have the redux [dispatch](http://redux.js.org/docs/api/Store.html#dispatch) function passed to their props.
+Components which have been [connected to the SDK](/props/connecting.md) will have the redux [dispatch](http://redux.js.org/docs/api/Store.html#dispatch) function passed to their props.
 
+{% label %}src/main/javascript/PageSettings.jsx{% endlabel %}
 ```jsx
 import React from 'react';
 import { sdkConnect } from 'deskpro-sdk-react';

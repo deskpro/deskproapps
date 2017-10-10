@@ -52,6 +52,7 @@ npm install
 ### Step 2. Configure the manifest
 Edit the app configuration in _package.json_, which can be found in the app root directory. Change the "title" property to "OAuth Tutorial". Also add the "storage" values shown below.
 
+{% label %}package.json{% endlabel %}
 ```json
 "deskpro": {
   "version": "2.1.0",
@@ -85,11 +86,10 @@ Edit the app configuration in _package.json_, which can be found in the app root
 @todo
 
 ### Step 3. Create a settings page
-Create a new component with a form at _src/main/javascript/PageSettings.jsx_.
+Create a new component with a form.
 
+{% label %}src/main/javascript/PageSettings.jsx{% endlabel %}
 ```jsx
-// PageSettings.jsx
-
 import React from 'react';
 import { sdkConnect } from 'deskpro-sdk-react';
 import { Form, Input, Button } from 'deskpro-components/lib/bindings/redux-form';
@@ -161,11 +161,10 @@ export default sdkConnect(PageSettings);
 @todo
 
 ### Step 4. Create an index page
-Create a new component to display the oauth access token at _src/main/javascript/PageIndex.jsx_.
+Create a new component to display the oauth access token.
 
+{% label %}src/main/javascript/PageIndex.jsx{% endlabel %}
 ```jsx
-// PageIndex.jsx
-
 import React from 'react';
 import { sdkConnect } from 'deskpro-sdk-react';
 
@@ -206,11 +205,10 @@ export default sdkConnect(PageIndex);
 @todo
 
 ### Step 5. Modify the app component
-Edit the app component at _src/main/javascript/App.jsx_ to look like the following code.
+Edit the app component to look like the following code.
 
+{% label %}src/main/javascript/App.jsx{% endlabel %}
 ```jsx
-// App.jsx
-
 import React from 'react';
 import PageSettings from './PageSettings';
 import PageIndex from './PageIndex';

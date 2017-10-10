@@ -27,6 +27,7 @@ npm install
 ### Step 2. Update the manifest
 Edit the app configuration in _package.json_, which can be found in the app root directory. Change the "title" property to "Participants".
 
+{% label %}package.json{% endlabel %}
 ```json
 {
   "deskpro": {
@@ -46,14 +47,13 @@ Edit the app configuration in _package.json_, which can be found in the app root
 
 **Explanation**  
 
-*  The "title" value will be shown in the app toolbar. See the [manifest documentation](/pages/manifest) for more information.
+*  The "title" value will be shown in the app toolbar. See the [manifest documentation](/manifest.md) for more information.
 
 ### Step 3. Modify the app component
-Edit the app component at _src/main/javascript/App.jsx_ to look like the following code.
+Edit the app component to look like the following code.
 
+{% label %}src/main/javascript/App.jsx{% endlabel %}
 ```jsx
-// App.jsx
-
 import React from 'react';
 import { Container, Avatar } from 'deskpro-components';
 
@@ -84,11 +84,12 @@ export default class App extends React.Component {
 
 **Explanation**
 
-* The SDK automatically injects the [tabData](/pages/props/#tabdata) prop into the component. This prop is a plain object which contains information about the open ticket. The code above iterates over the `tabData.participants` array and displays an avatar for each person.
+* The SDK automatically injects the [tabData](/props/tabdata.md) prop into the component. This prop is a plain object which contains information about the open ticket. The code above iterates over the `tabData.participants` array and displays an avatar for each person.
 
 ### Step 4. Modify the app styles
-The boilerplate includes a SASS stylesheet which can be found in _src/main/sass/index.scss_. Modify the stylesheet to look like the following.
+Modify the stylesheet to look like the following.
 
+{% label %}src/main/sass/index.scss{% endlabel %}
 ```sass
 $dp-styles-font-path: "~deskpro-components/src/styles/fonts/";
 @import "~deskpro-components/src/styles/main.scss";

@@ -36,5 +36,5 @@ class Page extends React.Component {
 export default sdkConnect(Page);
 ```
 
-!!! note
-    Components using the `LinkButton` component must be [connected to the SDK](/pages/props/#connecting-your-components) using `sdkConnect` or `DeskproSDK`.
+> **[info]**
+Components using the `LinkButton` component must be [connected to the SDK](/pages/props/#connecting-your-components) using `sdkConnect` or `DeskproSDK`.

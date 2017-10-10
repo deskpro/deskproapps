@@ -1,3 +1,6 @@
 {
-    "plugins": ["alerts"]
+    "plugins": ["alerts", "anchors", "copy-code-button", "codeblock-label", "custom-favicon"],
+    "pluginsConfig": {
+        "favicon": "favicon.png"
+    }
 }

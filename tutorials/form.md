@@ -1,6 +1,6 @@
 Overview
 ========
-This tutorial will walk you through creating a DeskPRO app which has two pages. One page with a settings form and one page which displays the form values. [App storage](/pages/props/#storage) will be used to save the values, and the [route object](/pages/props/#route) will be used to switch between the two pages.
+This tutorial will walk you through creating a DeskPRO app which has two pages. One page with a settings form and one page which displays the form values. [App storage](/props/storage.md) will be used to save the values, and the [route object](/props/route.md) will be used to switch between the two pages.
 
 ![screenshot](/images/tutorials/form-1.png)
 
@@ -27,6 +27,7 @@ npm install
 ### Step 2. Update the manifest
 Edit the app configuration in _package.json_, which can be found in the app root directory. Change the "title" property to "Form Tutorial".
 
+{% label %}package.json{% endlabel %}
 ```json
 {
   "deskpro": {
@@ -54,14 +55,13 @@ Edit the app configuration in _package.json_, which can be found in the app root
 
 **Explanation**  
 
-*  The "title" value will be shown in the app toolbar. See the [manifest documentation](/pages/manifest) for more information.
+*  The "title" value will be shown in the app toolbar. See the [manifest documentation](/manifest.md) for more information.
 
 ### Step 3. Create the settings page
-Create a new component with a form at _src/main/javascript/PageForm.jsx_.
+Create a new component with a form.
 
+{% label %}src/main/javascript/PageForm.jsx{% endlabel %}
 ```jsx
-// PageForm.jsx
-
 import React from 'react';
 import { sdkConnect } from 'deskpro-sdk-react';
 import { Container } from 'deskpro-components';
@@ -120,27 +120,27 @@ export default sdkConnect(PageForm);
 
 *  The form uses components from the [deskpro-components](https://github.com/deskpro/deskpro-components) library, which is included in the boilerplate by default.
 
-* The [this.props.storage.onSubmitApp](/pages/props/#storage) function is passed to the form `onSubmit` handler to automatically save the submitted form values to app storage. The function saves the form values to the DeskPRO database using the form `name` prop ("settings") as the storage key. See the [storage documentation](/pages/props/#storage) for more information.
+* The [this.props.storage.onSubmitApp](/props/storage.md) function is passed to the form `onSubmit` handler to automatically save the submitted form values to app storage. The function saves the form values to the DeskPRO database using the form `name` prop ("settings") as the storage key. See the [storage documentation](/props/storage.md) for more information.
 
-* The `this.handleSubmit` function is then called by `this.props.storage.onSubmitApp` with the form values. The function switches to the index page using the SDK router. See the [route documentation](/pages/props/#route) for more information.
+* The `this.handleSubmit` function is then called by `this.props.storage.onSubmitApp` with the form values. The function switches to the index page using the SDK router. See the [route documentation](/props/route.md) for more information.
 
 * The form is initialized with the existing settings by passing `this.props.storage.app.settings` to the `initialValues` prop. This works because values written to app storage using the key "settings" can be read from storage via the prop `this.storage.app.settings`.
 
-* The `PageForm` component is connected to the SDK using the `sdkConnect` function. Which is required in order to read and write to storage. See the documentation on [connecting components to the SDK](/pages/props/#connecting-your-components) for more information.
+* The `PageForm` component is connected to the SDK using the `sdkConnect` function. Which is required in order to read and write to storage. See the documentation on [connecting components to the SDK](/props/connecting.md) for more information.
 
-!!! note
-    The code uses `(storage.app.settings || {})` to assign a default value because the settings will not exist the first time you run the app.
+> **[info]**
+> The code uses `(storage.app.settings || {})` to assign a default value because the settings will not exist the first time you run the app.
 
-!!! note
-    The callback passed to `this.props.storage.onSubmitApp` is optional and may be omitted. Simply pass the function to the submit handler using `onSubmit={this.props.storage.onSubmitApp}` when post-processing of the form values is not required.
+<!-- -->
+> **[info]**
+>    The callback passed to `this.props.storage.onSubmitApp` is optional and may be omitted. Simply pass the function to the submit handler using `onSubmit={this.props.storage.onSubmitApp}` when post-processing of the form values is not required.
 
 
 ### Step 4. Create the index page
-Create a new component to display the form values at _src/main/javascript/PageIndex.jsx_.
+Create a new component to display the form values.
 
+{% label %}src/main/javascript/PageIndex.jsx{% endlabel %}
 ```jsx
-// PageIndex.jsx
-
 import React from 'react';
 import { LinkButton, sdkConnect } from 'deskpro-sdk-react';
 import { Container } from 'deskpro-components';
@@ -178,17 +178,17 @@ export default sdkConnect(PageIndex);
 
 **Explanation**
 
-* The settings were saved to app storage using the key "settings" which means they can be read from storage from `this.props.storage.app.settings`. See the [storage documentation](/pages/props/#storage) for more information.
+* The settings were saved to app storage using the key "settings" which means they can be read from storage from `this.props.storage.app.settings`. See the [storage documentation](/props/storage.md) for more information.
 
-* The `LinkButton` component uses the SDK router to switch to the "form" page when clicked. See the [route documentation](/pages/props/#route) for more information.
+* The `LinkButton` component uses the SDK router to switch to the "form" page when clicked. See the [route documentation](/props/route.md) for more information.
 
-* The `PageIndex` component is connected to the SDK using the `sdkConnect` function. Which is required in order to read and write to storage. See the documentation on [connecting components to the SDK](/pages/props/#connecting-your-components) for more information.
+* The `PageIndex` component is connected to the SDK using the `sdkConnect` function. Which is required in order to read and write to storage. See the documentation on [connecting components to the SDK](/props/connecting.md) for more information.
 
 ### Step 5. Modify the app component
-Edit the app component at _src/main/javascript/App.jsx_ to look like the following code.
-```jsx
-// App.jsx
+Edit the app component to look like the following code.
 
+{% label %}src/main/javascript/App.jsx{% endlabel %}
+```jsx
 import React from 'react';
 import { Routes, Route } from 'deskpro-sdk-react';
 import { Container } from 'deskpro-components';
@@ -209,10 +209,10 @@ export default App;
 
 **Explanation**
 
-* The `Routes` components reads the `this.props.route.location` value to render the `Route` with the matching `location` prop. See the [Routes component documentation](/pages/components/Routes/) for more information.
+* The `Routes` components reads the `this.props.route.location` value to render the `Route` with the matching `location` prop. See the [Routes component documentation](/components/routes.md) for more information.
 
-!!! note
-    The `App` component is connected to the SDK automatically by the boilerplate, and does _not_ need to be wrapped with `sdkConnect`.
+> **[info]**
+> The `App` component is connected to the SDK automatically by the boilerplate, and does _not_ need to be wrapped with `sdkConnect`.
 
 ### Step 6. Run the dev server
 Make sure DeskPRO is running on your computer, and then from the app root directory run the following command.
