@@ -2,11 +2,24 @@ Overview
 ========
 The SDK includes a light-weight router which displays different pages within DeskPRO apps. Route locations are defined using simple names instead of addresses, because DeskPRO apps do not use the browser location (URL). The current location is changed by calling [this.props.route.to()](/pages/props/#route) with the name of the new location, or by using the [Link](/pages/components/Link) and [LinkButton](/pages/components/LinkButton) components.
 
-## Example
-First create a few pages for the app.
+## Props
 
 ```jsx
-// PageSettings.jsx
+<Routes>
+    <Route
+        location={string}
+        component={element}
+        defaultRoute={bool}
+    />
+</Routes>
+```
+
+## Example
+
+First create a few pages for the app.
+
+{% label %}PageSettings.jsx{% endlabel %}
+```jsx
 import React from 'react';
 import { Link, sdkConnect } from 'deskpro-sdk-react';
 
@@ -22,8 +35,8 @@ const PageSettings = () => (
 export default sdkConnect(PageSettings);
 ```
 
+{% label %}PageIndex.jsx{% endlabel %}
 ```jsx
-// PageIndex.jsx
 import React from 'react';
 import { Link, sdkConnect } from 'deskpro-sdk-react';
 
@@ -39,8 +52,8 @@ const PageSettings = () => (
 export default sdkConnect(PageSettings);
 ```
 
+{% label %}PageNotFound.jsx{% endlabel %}
 ```jsx
-// PageNotFound.jsx
 import React from 'react';
 
 const PageNotFound = () => (
@@ -54,8 +67,8 @@ export default PageNotFound;
 
 Now create the main app component which contains the `Routes`. The `Route` which matches the current location gets rendered. The route with the `defaultRoute` prop renders when no other routes matches the current location.
 
+{% label %}App.jsx{% endlabel %}
 ```jsx
-// App.jsx
 import React from 'react';
 import { Routes, Route, sdkConnect } from 'deskpro-sdk-react';
 import PageSettings from './PageSettings';
@@ -95,8 +108,9 @@ Routes may also be defined using child components instead of the `component` pro
 
 ## Changing routes manually
 
-Call `this.props.route.to()` to change routes manually.
+Call `this.props.route.to()` to manually change the route.
 
+{% label %}PageSettings.jsx{% endlabel %}
 ```jsx
 import React from 'react';
 import { sdkConnect } from 'deskpro-sdk-react';

@@ -4,6 +4,11 @@ Route
 
 A light-weight router which is used to display different "pages" within an app. Pages within apps do not have URLs like web pages, but they can be given simple labels like "settings" or "index", and `this.props.route` can then be used to switch between them.
 
+The object contains two properties:
+
+* `this.props.route.location` - A string with the name of the current page
+* `this.props.route.params` - An object of key/value pairs associated with the location
+
 The following example uses a `switch` statement to display a different page depending on the current location.
 
 ```js
@@ -26,36 +31,6 @@ class Content extends React.Component {
 }
 
 export default sdkConnect(Content);
-```
-
-### Location and params
-
-The object contains two properties:
-
-* `this.props.route.location` - A string with the name of the current page
-* `this.props.route.params` - An object of key/value pairs associated with the location
-
-The [Routes](/components/routes.md) and [Route](/components/route.md) components may be used in place of a `switch` statement.
-
-```jsx
-// App.jsx
-import React from 'react';
-import { Routes, Route, sdkConnect } from 'deskpro-sdk-react';
-import PageAccount from './PageAccount';
-import PageIndex from './PageIndex';
-
-class App extends React.Component {
-  render() {
-    return (
-      <Routes>
-        <Route location="account" component={PageAccount} />
-        <Route location="index" component={PageIndex} />
-      </Routes>
-    );
-  }
-}
-
-export default sdkConnect(App);
 ```
 
 ### Switching to a route
@@ -146,7 +121,7 @@ export default sdkConnect(PageNote);
 
 ### Routes component
 
-The `Routes` and `Route` components are used to switch between the two pages.
+The [Routes](/components/routes.md) and [Route](/components/route.md) components may be used in place of a `switch` statement.
 
 ```jsx
 // App.jsx
@@ -154,14 +129,18 @@ import React from 'react';
 import { Routes, Route } from 'deskpro-sdk-react';
 import PageNote from './PageNote';
 import PageIndex from './PageIndex';
+import PageNotFound from './PageNotFound';
 
 const App = () => (
   <Routes>
     <Route location="note" component={PageNote} />
     <Route location="index" component={PageIndex} />
+    <Route defaultRoute component={PageNotFound} />
   </Routes>
 );
 ```
+
+The route with the matching location will be rendered. The route with `defaultRoute` will be rendered when no other route matches.
 
 ### Link component
 

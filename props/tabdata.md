@@ -22,7 +22,7 @@ class TicketInfo extends React.Component {
     }
 }
 
-export default sdkConnect(Menu);
+export default sdkConnect(TicketInfo);
 ```
 
 The object contains the following properties:

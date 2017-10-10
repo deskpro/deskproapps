@@ -6,7 +6,7 @@ An object containing methods which allow you to manipulate the UI.
 
 ### setLoading
 
-Call `this.props.ui.setLoading(true)` to display the loading animation, and `this.props.ui.setLoading(false)` to turn it off.
+Call `this.props.ui.setLoading()` to display the loading animation. Pass `false` to the method to turn it off the loading animation.
 
 ![screenshot](/images/props-ui-2.png)
 

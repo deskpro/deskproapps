@@ -2,6 +2,9 @@ Overview
 ========
 The `LinkButton` component changes the current route location when clicked. See the [route documentation](/pages/props/#route) for more information.
 
+> **[info]**
+Components using the `LinkButton` component must be [connected to the SDK](/pages/props/#connecting-your-components) using `sdkConnect` or `DeskproSDK`.
+
 ## Props
 
 ```jsx
@@ -35,6 +38,3 @@ class Page extends React.Component {
 
 export default sdkConnect(Page);
 ```
-
-> **[info]**
-Components using the `LinkButton` component must be [connected to the SDK](/pages/props/#connecting-your-components) using `sdkConnect` or `DeskproSDK`.
