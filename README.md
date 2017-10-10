@@ -1,8 +1,11 @@
-# Welcome!
+Welcome!
+========
+
 DeskPRO React SDK is a library for connecting [React](https://reactjs.org/) components to the DeskPRO API.
 
 ## A Simple App
-The SDK automatically passes DeskPRO props to your components, like the `tabData` prop which contains details about an open ticket.
+
+Creating rich DeskPRO apps is quick and easy using the React SDK.
 
 ```jsx
 import React from 'react';
