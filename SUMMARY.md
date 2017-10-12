@@ -21,3 +21,4 @@
     * [Forms](tutorials/form.md)
     * [OAuth](tutorials/oauth.md)
     * [Redux](tutorials/redux.md)
+    * [Basic with jQuery](tutorials/jquery.md)
