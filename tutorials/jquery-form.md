@@ -136,27 +136,27 @@ Edit the app HTML file to look like the following.
     <script src="../assets/main.js"></script>
     
     <script>
-      var appContainer     = $('#deskpro-app');
-      var indexPage        = $('#index-page');
-      var settingsPage     = $('#settings-page').hide();
-      var form             = $('#settings-form');
-      var spanClientId     = $('#span-clientId');
-      var spanClientSecret = $('#span-clientSecret');
-      
       function deskproapp(dpapp) {
+        var $appContainer     = $('#deskpro-app');
+        var $indexPage        = $('#index-page');
+        var $settingsPage     = $('#settings-page').hide();
+        var $form             = $('#settings-form');
+        var $spanClientId     = $('#span-clientId');
+        var $spanClientSecret = $('#span-clientSecret');
+        
         $('#settings-btn').on('click', function() {
-          indexPage.hide();
-          settingsPage.show();
+          $indexPage.hide();
+          $settingsPage.show();
         });
         
         dpapp.storage.getAppStorage('settings')
           .then(function(settings) {
             settings = settings || { clientId: '', clientSecret: '' };
             
-            spanClientId.text(settings.clientId);
-            spanClientSecret.text(settings.clientSecret);
-            form.find('[name="clientId"]').val(settings.clientId);
-            form.find('[name="clientSecret"]').val(settings.clientSecret);
+            $spanClientId.text(settings.clientId);
+            $spanClientSecret.text(settings.clientSecret);
+            $form.find('[name="clientId"]').val(settings.clientId);
+            $form.find('[name="clientSecret"]').val(settings.clientSecret);
           });
         
         form.on('submit', function(e) {
@@ -171,14 +171,14 @@ Edit the app HTML file to look like the following.
           
           dpapp.storage.setAppStorage('settings', settings)
             .then(function() {
-              spanClientId.text(settings.clientId);
-              spanClientSecret.text(settings.clientSecret);
-              indexPage.show();
-              settingsPage.hide();
+              $spanClientId.text(settings.clientId);
+              $spanClientSecret.text(settings.clientSecret);
+              $indexPage.show();
+              $settingsPage.hide();
             });
         });
   
-        appContainer.show();
+        $appContainer.show();
       }
     </script>
   </body>
@@ -211,8 +211,8 @@ The SDK calls the function `deskproapp` to start running the app code. It passes
 
 ```js
 $('#settings-btn').on('click', function() {
-  indexPage.hide();
-  settingsPage.show();
+  $indexPage.hide();
+  $settingsPage.show();
 });
 ```
 
@@ -223,10 +223,10 @@ dpapp.storage.getAppStorage('settings')
   .then(function(settings) {
     settings = settings || { clientId: '', clientSecret: '' };
 
-    spanClientId.text(settings.clientId);
-    spanClientSecret.text(settings.clientSecret);
-    form.find('[name="clientId"]').val(settings.clientId);
-    form.find('[name="clientSecret"]').val(settings.clientSecret);
+    $spanClientId.text(settings.clientId);
+    $spanClientSecret.text(settings.clientSecret);
+    $form.find('[name="clientId"]').val(settings.clientId);
+    $form.find('[name="clientSecret"]').val(settings.clientSecret);
   });
 ```
 
@@ -245,10 +245,10 @@ form.on('submit', function(e) {
 
   dpapp.storage.setAppStorage('settings', settings)
     .then(function() {
-      spanClientId.text(settings.clientId);
-      spanClientSecret.text(settings.clientSecret);
-      indexPage.show();
-      settingsPage.hide();
+      $spanClientId.text(settings.clientId);
+      $spanClientSecret.text(settings.clientSecret);
+      $indexPage.show();
+      $settingsPage.hide();
     });
 });
 ```
@@ -257,7 +257,7 @@ Binds a callback to the settings form `submit` event. The callback converts the 
 
 
 ```js
-appContainer.show();
+$appContainer.show();
 ```
 
 The is fully initialized and all events bound. At this point the app can be unhidden.
