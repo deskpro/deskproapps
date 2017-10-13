@@ -53,7 +53,7 @@ Edit the app configuration in _package.json_, which can be found in the app root
 }
 ```
 
-**Explanation**  
+#### Explanation
 
 *  The "title" value will be shown in the app toolbar. See the [manifest documentation](/manifest.md) for more information.
 
@@ -116,7 +116,7 @@ export default sdkConnect(PageForm);
 
 ![screenshot](/images/tutorials/form-1.png)
 
-**Explanation**
+#### Explanation
 
 *  The form uses components from the [deskpro-components](https://github.com/deskpro/deskpro-components) library, which is included in the boilerplate by default.
 
@@ -176,7 +176,7 @@ export default sdkConnect(PageIndex);
 
 ![screenshot](/images/tutorials/form-2.png)
 
-**Explanation**
+#### Explanation
 
 * The settings were saved to app storage using the key "settings" which means they can be read from storage from `this.props.storage.app.settings`. See the [storage documentation](/props/storage.md) for more information.
 
@@ -207,7 +207,7 @@ const App = () => (
 export default App;
 ```
 
-**Explanation**
+#### Explanation
 
 * The `Routes` components reads the `this.props.route.location` value to render the `Route` with the matching `location` prop. See the [Routes component documentation](/components/routes.md) for more information.
 

@@ -83,7 +83,7 @@ Edit the app configuration in _package.json_, which can be found in the app root
 }
 ```
 
-**Explanation**  
+#### Explanation
 @todo
 
 ## Step 3. Create a settings page
@@ -158,7 +158,7 @@ export default sdkConnect(PageSettings);
 
 ![screenshot](/images/tutorials/oauth-1.png)
 
-**Explanation**  
+#### Explanation
 @todo
 
 ## Step 4. Create an index page
@@ -202,7 +202,7 @@ export default sdkConnect(PageIndex);
 ![screenshot](/images/tutorials/oauth-2.png)
 ![screenshot](/images/tutorials/oauth-3.png)
 
-**Explanation**  
+#### Explanation
 @todo
 
 ## Step 5. Modify the app component
@@ -262,7 +262,7 @@ export default class App extends React.Component {
 
 ![screenshot](/images/tutorials/oauth-4.png)
 
-**Explanation**  
+#### Explanation
 @todo
 
 ## Step 6. Run the dev server
