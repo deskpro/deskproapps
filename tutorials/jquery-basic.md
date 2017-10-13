@@ -6,12 +6,7 @@ This tutorial will walk you through creating a simple DeskPRO app using jQuery. 
 
 ----
 
-To follow this tutorial you will need:
-
-* [DeskPRO running on your computer](https://github.com/deskpro/deskpro/blob/develop/README.md)
-* NPM 6 or greater
-* Git 1.9 or greater
-* A IDE or text editor
+!INCLUDE "_prerequisites.md"
 
 ----
 

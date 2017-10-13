@@ -1,5 +1,14 @@
 {
-    "plugins": ["alerts", "anchors", "copy-code-button", "codeblock-label", "custom-favicon", "scripts", "toolbar"],
+    "plugins": [
+        "alerts",
+        "anchors",
+        "copy-code-button",
+        "codeblock-label",
+        "custom-favicon",
+        "scripts",
+        "toolbar",
+        "include"
+    ],
     "pluginsConfig": {
         "favicon": "favicon.png",
         "scripts": {
