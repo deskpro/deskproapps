@@ -1,11 +1,8 @@
-# Common application use cases
-
+Common application use cases
+============================
 In this section, you will see code examples for the most common operations:
 
-- [Saving and reading storage](#saving-and-reading-storage)
-- [Make REST calls](#make-rest-calls)
-- [Interact with the main DeskPRO User interface](#interact-with-the-main-deskpro-user-interface)
-- [Interact with your application's UI Container](#interact-with-your-applications-ui-container)
+<!-- toc -->
 
 ## Saving and reading storage
 

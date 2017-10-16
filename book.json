@@ -7,7 +7,8 @@
         "custom-favicon",
         "scripts",
         "toolbar",
-        "include"
+        "include",
+        "toc"
     ],
     "pluginsConfig": {
         "favicon": "favicon.png",
@@ -24,6 +25,10 @@
                     "url": "https://github.com/headzoo/deskpro-sdk-react"
                 }
             ]
+        },
+        "toc": {
+            "addClass": true,
+            "className": "toc"
         }
     }
 }

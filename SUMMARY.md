@@ -16,7 +16,6 @@
     - [Basic with jQuery](tutorials/jquery-basic.md)
     - [Forms with jQuery](tutorials/jquery-form.md)
     - [OAuth with jQuery](tutorials/jquery-oauth.md)
-
 ### API
 * [Manifest](api/manifest.md)
 * [Props]()

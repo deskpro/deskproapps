@@ -1,11 +1,8 @@
-# Common configuration use cases
-
+Common configuration use cases
+==============================
 In this section:
 
-- [Configure user-only storage](#configure-user-only-storage)
-- [Configure application-wide storage](#configure-application-wide-storage)
-- [Configure third-party API access](#configure-third-party-api-access)
-
+<!-- toc -->
 
 ## Configure user-only storage
 

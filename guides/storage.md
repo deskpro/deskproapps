@@ -1,7 +1,9 @@
-# Application Storage Overview
-
+Storage Overview
+================
 In this section, you will learn more about the concepts related to application storage, how to work with the `Application Storage API` and the various storage related options
 available in your `application manifest`, such as `storage access patterns`.
+
+<!-- toc -->
 
 ## Security features
 
