@@ -125,7 +125,7 @@ class PageSettings extends React.PureComponent {
 export default sdkConnect(PageSettings);
 ```
 
-![screenshot](/images/guides/oauth-1.png)
+![screenshot](/images/tutorials/oauth-1.png)
 
 #### Explanation
 @todo
@@ -168,8 +168,8 @@ class PageIndex extends React.Component {
 export default sdkConnect(PageIndex);
 ```
 
-![screenshot](/images/guides/oauth-2.png)
-![screenshot](/images/guides/oauth-3.png)
+![screenshot](/images/tutorials/oauth-2.png)
+![screenshot](/images/tutorials/oauth-3.png)
 
 #### Explanation
 @todo
@@ -229,7 +229,7 @@ export default class App extends React.Component {
 }
 ```
 
-![screenshot](/images/guides/oauth-4.png)
+![screenshot](/images/tutorials/oauth-4.png)
 
 #### Explanation
 @todo

@@ -2,7 +2,7 @@ Overview
 ========
 This tutorial will walk you through creating a DeskPRO app which has two pages. One page with a settings form and one page which displays the form values. [App storage](/props/storage.md) will be used to save the values, and the [route object](/props/route.md) will be used to switch between the two pages.
 
-![screenshot](/images/guides/form-1.png)
+![screenshot](/images/tutorials/form-1.png)
 
 ----
 
@@ -109,7 +109,7 @@ class PageForm extends React.Component {
 export default sdkConnect(PageForm);
 ```
 
-![screenshot](/images/guides/form-1.png)
+![screenshot](/images/tutorials/form-1.png)
 
 #### Explanation
 
@@ -169,7 +169,7 @@ class PageIndex extends React.Component {
 export default sdkConnect(PageIndex);
 ```
 
-![screenshot](/images/guides/form-2.png)
+![screenshot](/images/tutorials/form-2.png)
 
 #### Explanation
 

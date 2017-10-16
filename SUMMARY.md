@@ -2,15 +2,20 @@
 
 ### Getting started
 * [Introduction](README.md)
-
-### Guides
-* [Basic](guides/basic.md)
-* [Forms](guides/form.md)
-* [OAuth](guides/oauth.md)
-* [Redux](guides/redux.md)
-* [Basic with jQuery](guides/jquery-basic.md)
-* [Forms with jQuery](guides/jquery-form.md)
-* [OAuth with jQuery](guides/jquery-oauth.md)
+* [Guides]()
+    - [Storage overview](guides/storage.md)
+    - [Common configuration use cases](guides/common_configuration.md)
+    - [Common application use cases](guides/common_application.md)
+    - [Running DeskPRO in dev mode](guides/deskpro_dev_mode.md)
+    - [Setting up Travis](guides/travis.md)
+* [Tutorials]()
+    - [Basic](tutorials/basic.md)
+    - [Forms](tutorials/form.md)
+    - [OAuth](tutorials/oauth.md)
+    - [Redux](tutorials/redux.md)
+    - [Basic with jQuery](tutorials/jquery-basic.md)
+    - [Forms with jQuery](tutorials/jquery-form.md)
+    - [OAuth with jQuery](tutorials/jquery-oauth.md)
 
 ### API
 * [Manifest](manifest.md)

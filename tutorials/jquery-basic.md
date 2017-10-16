@@ -2,7 +2,7 @@ Overview
 ========
 This tutorial will walk you through creating a simple DeskPRO app using jQuery. The app will display a list of people participating in a ticket.
 
-![screenshot](/images/guides/basic-1.png)
+![screenshot](/images/tutorials/basic-1.png)
 
 ----
 

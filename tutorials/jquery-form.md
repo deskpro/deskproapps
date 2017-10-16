@@ -2,7 +2,7 @@ Overview
 ========
 This tutorial will walk you through creating a DeskPRO app which has two pages. One page with a settings form and one page which displays the form values. [App storage](/props/storage.md) will be used to save the values, and the [route object](/props/route.md) will be used to switch between the two pages.
 
-![screenshot](/images/guides/form-1.png)
+![screenshot](/images/tutorials/form-1.png)
 
 ----
 
