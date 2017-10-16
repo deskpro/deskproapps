@@ -42,7 +42,7 @@ Edit the app configuration in _package.json_, which can be found in the app root
 
 **Explanation**  
 
-*  The "title" value will be shown in the app toolbar. See the [manifest documentation](/manifest.md) for more information.
+*  The "title" value will be shown in the app toolbar. See the [manifest documentation](/api/manifest.md) for more information.
 
 ## Step 3. Modify the HTML
 Edit the app HTML file to look like the following.

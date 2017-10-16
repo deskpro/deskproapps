@@ -100,7 +100,7 @@ export function runApp(dpapp) {
 ```
 
 ## Dispatch
-Components which have been [connected to the SDK](/props/connecting.md) will have the redux [dispatch](http://redux.js.org/docs/api/Store.html#dispatch) function passed to their props.
+Components which have been [connected to the SDK](/api/props/connecting.md) will have the redux [dispatch](http://redux.js.org/docs/api/Store.html#dispatch) function passed to their props.
 
 {% label %}src/main/javascript/PageSettings.jsx{% endlabel %}
 ```jsx

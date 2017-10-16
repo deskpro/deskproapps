@@ -1,6 +1,6 @@
 Overview
 ========
-This tutorial will walk you through creating a DeskPRO app which has two pages. One page with a settings form and one page which displays the form values. [App storage](/props/storage.md) will be used to save the values, and the [route object](/props/route.md) will be used to switch between the two pages.
+This tutorial will walk you through creating a DeskPRO app which has two pages. One page with a settings form and one page which displays the form values. [App storage](/api/props/storage.md) will be used to save the values, and the [route object](/api/props/route.md) will be used to switch between the two pages.
 
 ![screenshot](/images/tutorials/form-1.png)
 
@@ -54,7 +54,7 @@ Edit the app configuration in _package.json_, which can be found in the app root
 "title": "Form Tutorial"
 ```
 
-The "title" value will be shown in the app toolbar. See the [manifest documentation](/manifest.md) for more information.
+The "title" value will be shown in the app toolbar. See the [manifest documentation](/api/manifest.md) for more information.
 
 ```
 "storage": [
@@ -67,7 +67,7 @@ The "title" value will be shown in the app toolbar. See the [manifest documentat
 ]
 ```
 
-The app will be writing to and reading from DeskPRO app storage, which is a type of key/value store. The "storage" manifest property declares the storage names and permissions. See the [manifest documentation](/manifest.md) for more information.
+The app will be writing to and reading from DeskPRO app storage, which is a type of key/value store. The "storage" manifest property declares the storage names and permissions. See the [manifest documentation](/api/manifest.md) for more information.
 
 ## Step 3. Modify the HTML
 Edit the app HTML file to look like the following.

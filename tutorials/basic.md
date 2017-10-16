@@ -42,7 +42,7 @@ Edit the app configuration in _package.json_, which can be found in the app root
 
 #### Explanation
 
-*  The "title" value will be shown in the app toolbar. See the [manifest documentation](/manifest.md) for more information.
+*  The "title" value will be shown in the app toolbar. See the [manifest documentation](/api/manifest.md) for more information.
 
 ## Step 3. Modify the app component
 Edit the app component to look like the following code.
@@ -79,7 +79,7 @@ export default class App extends React.Component {
 
 #### Explanation
 
-* The SDK automatically injects the [tabData](/props/tabdata.md) prop into the component. This prop is a plain object which contains information about the open ticket. The code above iterates over the `tabData.participants` array and displays an avatar for each person.
+* The SDK automatically injects the [tabData](/api/props/tabdata.md) prop into the component. This prop is a plain object which contains information about the open ticket. The code above iterates over the `tabData.participants` array and displays an avatar for each person.
 
 ## Step 4. Modify the app styles
 Modify the stylesheet to look like the following.
