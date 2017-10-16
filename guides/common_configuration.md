@@ -89,10 +89,10 @@ The url access pattern can be:
 
 2. a valid javascript regular expression
 
-    For example: `/^https?://([^.]+\\.)*mailchimp.com/?.*$/`, will match any path server by `mailchimp.com` as long as it is over http or https. You can use this example and replace mailchimp.com with your domain.
+For example: `/^https?://([^.]+\\.)*mailchimp.com/?.*$/`, will match any path server by `mailchimp.com` as long as it is over http or https. You can use this example and replace mailchimp.com with your domain.
     
 3. a url template, which would use storage variable names as placeholders:
     
-    For instance suppose your application generates a unique user key which it uses as part of a url to fetch some user related information. 
+For instance suppose your application generates a unique user key which it uses as part of a url to fetch some user related information. 
     
-    Then you would whitelist the following pattern: `https://{{my-user-secret-link}}.mydomain.com/`, where `my-user-secret-link` is the name of variable which stores the key value and can be read only by the authenticated user. 
+Then you would whitelist the following pattern: `https://{{my-user-secret-link}}.mydomain.com/`, where `my-user-secret-link` is the name of variable which stores the key value and can be read only by the authenticated user. 
