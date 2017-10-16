@@ -29,18 +29,18 @@ const App = ({ tabData }) => (
 export default App;
 ```
 
-![screenshot](/images/tutorials/basic-1.png)
+![screenshot](/images/guides/basic-1.png)
 
-## Tutorials
+## Guides
 
-#### [Basic](tutorials/basic.html)
+#### [Basic](guides/basic.html)
 A tutorial that walks you through creating a simple DeskPRO app which displays a list of people participating in a ticket.
 
-#### [Forms](tutorials/form.html)
+#### [Forms](guides/form.html)
 A tutorial that walks you through creating a DeskPRO app which has two pages. One page with a settings form and one page which displays the form values.
 
-#### [OAuth](tutorials/oauth.html)
+#### [OAuth](guides/oauth.html)
 A tutorial that walks you through creating a DeskPRO app which uses oauth to authenticate with a remote service provider.
 
-#### [Redux](tutorials/redux.html)
+#### [Redux](guides/redux.html)
 A tutorial that walks advanced developers through using Redux with the SDK.
