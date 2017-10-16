@@ -37,12 +37,6 @@ Edit the app configuration in _package.json_, which can be found in the app root
   "scope": "agent",
   "storage": [
     {
-      "name": "oauth:github",
-      "isBackendOnly": true,
-      "permRead": "EVERYBODY",
-      "permWrite": "OWNER"
-    },
-    {
       "name": "settings",
       "isBackendOnly": false,
       "permRead": "EVERYBODY",
@@ -53,13 +47,48 @@ Edit the app configuration in _package.json_, which can be found in the app root
       "isBackendOnly": false,
       "permRead": "OWNER",
       "permWrite": "OWNER"
+    },
+    {
+      "name": "oauth:github",
+      "isBackendOnly": true,
+      "permRead": "EVERYBODY",
+      "permWrite": "OWNER"
     }
   ]
 }
 ```
 
 #### Explanation
-@todo
+
+```
+"title": "OAuth Tutorial"
+```
+
+The "title" value will be shown in the app toolbar.
+
+```
+{
+  "name": "settings",
+  "isBackendOnly": false,
+  "permRead": "EVERYBODY",
+  "permWrite": "OWNER"
+},
+{
+  "name": "user_settings",
+  "isBackendOnly": false,
+  "permRead": "OWNER",
+  "permWrite": "OWNER"
+},
+{
+  "name": "oauth:github",
+  "isBackendOnly": true,
+  "permRead": "EVERYBODY",
+  "permWrite": "OWNER"
+}
+```
+
+Declares permissions on values which will be written to and read from app storage.
+
 
 ## Step 3. Modify the HTML
 Edit the app HTML file to look like the following.
@@ -203,14 +232,127 @@ Edit the app HTML file to look like the following.
 <div id="deskpro-app" class="deskpro-app" style="display: none;">
 ```
 
-The mount point for the app. Initially set to be invisible to hide the contents until the app is ready to run. The children of the element includes two "pages." An index page which displays the user access token, and a settings page with a form which is used to change the settings.
+The mount point for the app. Initially set to be invisible to hide the contents until the app is ready to run.
+
+```html
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="../assets/vendor.js"></script>
+<script src="../assets/main.js"></script>
+```
+
+Includes jQuery and scripts needed by the SDK.
+
+```js
+function deskproapp(dpapp) {
+
+}
+```
+
+The SDK calls the function `deskproapp` to start running the app code. It passes an instance of `dpapp` to the function, which is used to interact with the DeskPRO API.
+
+```js
+var settings     = {},
+    userSettings = {};
+```
+
+Variables which will hold the values declared in the manifest "storage" configuration.
+
+```js
+var handleSubmit = function(e) {
+  e.preventDefault();
+
+  settings = {};
+  var submitted = $form.serializeArray();
+  for (var i = 0; i < submitted.length; i++) {
+    var value = submitted[i];
+    settings[value.name] = value.value;
+  }
+
+  return dpapp.storage.setAppStorage('settings', settings)
+    .then(function() {
+      $indexPage.show();
+      $settingsPage.hide();
+      return true;
+    });
+};
+```
+
+Function which gets bound to the settings form "submit" event. It converts the form values into an object of key/value pairs, and then calls `dpapp.storage.setAppStorage('settings', settings)` to save those values to app storage. Once saved, the app hides the settings form and shows the index page.
+
+```js
+var handleAppSettings = function(resp) {
+  settings = resp;
+  if (settings) {
+    $form.find('[name="clientId"]').val(settings.clientId);
+    $form.find('[name="clientSecret"]').val(settings.clientSecret);
+
+    return dpapp.storage.getAppStorage('user_settings')
+        .then(handleUserSettings);
+  } else {
+    $indexPage.hide();
+    $settingsPage.show();
+  }
+};
+```
+
+The app settings are fetched from app storage by calling `dpapp.storage.getAppStorage('settings')`, which returns a promise. The `handleAppSettings()` function gets called by the promise with the storage values.
+
+```js
+var handleUserSettings = function(resp) {
+  userSettings = resp;
+  if (userSettings) {
+    $spanAccessToken.text(userSettings.accessToken);
+    $indexPage.show();
+    $settingsPage.hide();
+
+    return Promise.resolve({});
+  } else {
+    return dpapp.oauth.access('github')
+      .then(handleOAuthAccess);
+  }
+};
+```
+
+The user settings are fetched from app storage by calling `dpapp.storage.getAppStorage('user_settings')`, which returns a promise. The `handleUserSettings()` function gets called by the promise with the values.
+
+```js
+var handleOAuthAccess = function(resp) {
+  userSettings = {
+    accessToken: resp.accessToken
+  };
+
+  return dpapp.storage.setAppStorage('user_settings', userSettings)
+    .then(function() {
+      $indexPage.show();
+      $settingsPage.hide();
+    });
+};
+```
+
+Called by the promise returned by the `dpapp.oauth.access('github')` function.
+
+```js
+$form.on('submit', handleSubmit);
+```
+
+Binds the submit handler to the form.
+
+```js
+dpapp.storage.getAppStorage('settings')
+  .then(handleAppSettings);
+```
+
+Fetches the value for "settings" from app storage. Passes the handler to the promise returned by `dpapp.storage.getAppStorage('settings')`.
+
+```js
+$appContainer.show();
+```
+
+Finally the app is displayed.
 
 
 ## Step 4. Run the dev server
-Make sure DeskPRO is running on your computer, and then from the app root directory run the following command.
+!INCLUDE "_dev_server.md"
 
-```
-npm run dev
-```
-
-The `dev` script builds your app and starts a development server which communicates with DeskPRO to install the app. Open [https://localhost/agent/?appstore.environment=development](http://localhost/agent/?appstore.environment=development) when the the `dev` command finishes building to view the finished app.
+## Step 5. Deploy the app
+!INCLUDE "_deploy_app.md"

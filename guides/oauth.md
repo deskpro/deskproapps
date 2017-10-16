@@ -125,7 +125,7 @@ class PageSettings extends React.PureComponent {
 export default sdkConnect(PageSettings);
 ```
 
-![screenshot](/images/tutorials/oauth-1.png)
+![screenshot](/images/guides/oauth-1.png)
 
 #### Explanation
 @todo
@@ -168,8 +168,8 @@ class PageIndex extends React.Component {
 export default sdkConnect(PageIndex);
 ```
 
-![screenshot](/images/tutorials/oauth-2.png)
-![screenshot](/images/tutorials/oauth-3.png)
+![screenshot](/images/guides/oauth-2.png)
+![screenshot](/images/guides/oauth-3.png)
 
 #### Explanation
 @todo
@@ -229,16 +229,13 @@ export default class App extends React.Component {
 }
 ```
 
-![screenshot](/images/tutorials/oauth-4.png)
+![screenshot](/images/guides/oauth-4.png)
 
 #### Explanation
 @todo
 
 ## Step 6. Run the dev server
-Make sure DeskPRO is running on your computer, and then from the app root directory run the following command.
+!INCLUDE "_dev_server.md"
 
-```
-npm run dev
-```
-
-The `dev` script builds your app and starts a development server which communicates with DeskPRO to install the app. Open [https://localhost/agent/?appstore.environment=development](http://localhost/agent/?appstore.environment=development) when the the `dev` command finishes building to view the finished app.
+## Step 7. Deploy the app
+!INCLUDE "_deploy_app.md"

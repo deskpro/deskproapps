@@ -2,7 +2,7 @@ Overview
 ========
 This tutorial will walk you through creating a DeskPRO app which has two pages. One page with a settings form and one page which displays the form values. [App storage](/props/storage.md) will be used to save the values, and the [route object](/props/route.md) will be used to switch between the two pages.
 
-![screenshot](/images/tutorials/form-1.png)
+![screenshot](/images/guides/form-1.png)
 
 ----
 
@@ -109,7 +109,7 @@ class PageForm extends React.Component {
 export default sdkConnect(PageForm);
 ```
 
-![screenshot](/images/tutorials/form-1.png)
+![screenshot](/images/guides/form-1.png)
 
 #### Explanation
 
@@ -169,7 +169,7 @@ class PageIndex extends React.Component {
 export default sdkConnect(PageIndex);
 ```
 
-![screenshot](/images/tutorials/form-2.png)
+![screenshot](/images/guides/form-2.png)
 
 #### Explanation
 
@@ -210,10 +210,7 @@ export default App;
 > The `App` component is connected to the SDK automatically by the boilerplate, and does _not_ need to be wrapped with `sdkConnect`.
 
 ## Step 6. Run the dev server
-Make sure DeskPRO is running on your computer, and then from the app root directory run the following command.
+!INCLUDE "_dev_server.md"
 
-```
-npm run dev
-```
-
-The `dev` script builds your app and starts a development server which communicates with DeskPRO to install the app. Open [https://localhost/agent/?appstore.environment=development](http://localhost/agent/?appstore.environment=development) when the the `dev` command finishes building to view the finished app.
+## Step 7. Deploy the app
+!INCLUDE "_deploy_app.md"

@@ -2,7 +2,7 @@ Overview
 ========
 This tutorial will walk you through creating a DeskPRO app which has two pages. One page with a settings form and one page which displays the form values. [App storage](/props/storage.md) will be used to save the values, and the [route object](/props/route.md) will be used to switch between the two pages.
 
-![screenshot](/images/tutorials/form-1.png)
+![screenshot](/images/guides/form-1.png)
 
 ----
 
@@ -258,10 +258,7 @@ $appContainer.show();
 The is fully initialized and all events bound. At this point the app can be unhidden.
 
 ## Step 4. Run the dev server
-Make sure DeskPRO is running on your computer, and then from the app root directory run the following command.
+!INCLUDE "_dev_server.md"
 
-```
-npm run dev
-```
-
-The `dev` script builds your app and starts a development server which communicates with DeskPRO to install the app. Open [https://localhost/agent/?appstore.environment=development](http://localhost/agent/?appstore.environment=development) when the the `dev` command finishes building to view the finished app.
+## Step 5. Deploy the app
+!INCLUDE "_deploy_app.md"

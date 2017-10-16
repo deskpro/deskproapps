@@ -2,7 +2,7 @@ Overview
 ========
 This tutorial will walk you through creating a simple DeskPRO app using jQuery. The app will display a list of people participating in a ticket.
 
-![screenshot](/images/tutorials/basic-1.png)
+![screenshot](/images/guides/basic-1.png)
 
 ----
 
@@ -121,10 +121,7 @@ $dp-styles-font-path: "~deskpro-components/src/styles/fonts/";
 ```
 
 ## Step 5. Run the dev server
-Make sure DeskPRO is running on your computer, and then from the app root directory run the following command.
+!INCLUDE "_dev_server.md"
 
-```
-npm run dev
-```
-
-The `dev` script builds your app and starts a development server which communicates with DeskPRO to install the app. Open [https://localhost/agent/?appstore.environment=development](http://localhost/agent/?appstore.environment=development) when the the `dev` command finishes building to view the finished app.
+## Step 6. Deploy the app
+!INCLUDE "_deploy_app.md"
