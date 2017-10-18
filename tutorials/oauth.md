@@ -20,7 +20,10 @@ npm install
 ```
 
 ## Step 2. Configure the manifest
-Edit the app configuration in _package.json_, which can be found in the app root directory. Change the "title" property to "OAuth Tutorial". Also add the "storage" values shown below.
+
+!INCLUDE "_manifest_summary.md"
+
+Edit the _package.json_, which can be found in the app root directory. Change the `deskpro.title` property to "OAuth Tutorial". Also add the "storage" values shown below.
 
 {% label %}package.json{% endlabel %}
 ```json

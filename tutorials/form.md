@@ -20,7 +20,10 @@ npm install
 ```
 
 ## Step 2. Update the manifest
-Edit the app configuration in _package.json_, which can be found in the app root directory. Change the "title" property to "Form Tutorial".
+
+!INCLUDE "_manifest_summary.md"
+
+Edit the _package.json_, which can be found in the app root directory. Change the `deskpro.title` property to "Form Tutorial".
 
 {% label %}package.json{% endlabel %}
 ```json
@@ -50,7 +53,11 @@ Edit the app configuration in _package.json_, which can be found in the app root
 
 #### Explanation
 
-*  The "title" value will be shown in the app toolbar. See the [manifest documentation](/api/manifest.md) for more information.
+The "title" value will be shown in the app toolbar.
+
+#### See also
+
+* [Manifest overview](/api/manifest.html)
 
 ## Step 3. Create the settings page
 Create a new component with a form.
@@ -113,15 +120,15 @@ export default sdkConnect(PageForm);
 
 #### Explanation
 
-*  The form uses components from the [deskpro-components](https://github.com/deskpro/deskpro-components) library, which is included in the boilerplate by default.
+The form uses components from the [deskpro-components](https://github.com/deskpro/deskpro-components) library, which is included in the boilerplate by default.
 
-* The [this.props.storage.onSubmitApp](/api/props/storage.md) function is passed to the form `onSubmit` handler to automatically save the submitted form values to app storage. The function saves the form values to the DeskPRO database using the form `name` prop ("settings") as the storage key. See the [storage documentation](/api/props/storage.md) for more information.
+The [this.props.storage.onSubmitApp](/api/props/storage.md) function is passed to the form `onSubmit` handler to automatically save the submitted form values to app storage. The function saves the form values to the DeskPRO database using the form `name` prop ("settings") as the storage key. See the [storage documentation](/api/props/storage.md) for more information.
 
-* The `this.handleSubmit` function is then called by `this.props.storage.onSubmitApp` with the form values. The function switches to the index page using the SDK router. See the [route documentation](/api/props/route.md) for more information.
+The `this.handleSubmit` function is then called by `this.props.storage.onSubmitApp` with the form values. The function switches to the index page using the SDK router. See the [route documentation](/api/props/route.md) for more information.
 
-* The form is initialized with the existing settings by passing `this.props.storage.app.settings` to the `initialValues` prop. This works because values written to app storage using the key "settings" can be read from storage via the prop `this.storage.app.settings`.
+The form is initialized with the existing settings by passing `this.props.storage.app.settings` to the `initialValues` prop. This works because values written to app storage using the key "settings" can be read from storage via the prop `this.storage.app.settings`.
 
-* The `PageForm` component is connected to the SDK using the `sdkConnect` function. Which is required in order to read and write to storage. See the documentation on [connecting components to the SDK](/api/props/connecting.md) for more information.
+The `PageForm` component is connected to the SDK using the `sdkConnect` function. Which is required in order to read and write to storage. See the documentation on [connecting components to the SDK](/api/props/connecting.md) for more information.
 
 > **[info]**
 > The code uses `(storage.app.settings || {})` to assign a default value because the settings will not exist the first time you run the app.
@@ -129,6 +136,10 @@ export default sdkConnect(PageForm);
 <!-- -->
 > **[info]**
 >    The callback passed to `this.props.storage.onSubmitApp` is optional and may be omitted. Simply pass the function to the submit handler using `onSubmit={this.props.storage.onSubmitApp}` when post-processing of the form values is not required.
+
+#### See also
+
+* [Storage prop](/api/props/storage.html)
 
 
 ## Step 4. Create the index page
@@ -173,11 +184,17 @@ export default sdkConnect(PageIndex);
 
 #### Explanation
 
-* The settings were saved to app storage using the key "settings" which means they can be read from storage from `this.props.storage.app.settings`. See the [storage documentation](/api/props/storage.md) for more information.
+The settings were saved to app storage using the key "settings" which means they can be read from storage from `this.props.storage.app.settings`. See the [storage documentation](/api/props/storage.md) for more information.
 
-* The `LinkButton` component uses the SDK router to switch to the "form" page when clicked. See the [route documentation](/api/props/route.md) for more information.
+The `LinkButton` component uses the SDK router to switch to the "form" page when clicked. See the [route documentation](/api/props/route.md) for more information.
 
-* The `PageIndex` component is connected to the SDK using the `sdkConnect` function. Which is required in order to read and write to storage. See the documentation on [connecting components to the SDK](/api/props/connecting.md) for more information.
+The `PageIndex` component is connected to the SDK using the `sdkConnect` function. Which is required in order to read and write to storage. See the documentation on [connecting components to the SDK](/api/props/connecting.md) for more information.
+
+#### See also
+
+* [Storage prop](/api/props/storage.html)
+* [Route prop](/api/props/route.md)
+
 
 ## Step 5. Modify the app component
 Edit the app component to look like the following code.

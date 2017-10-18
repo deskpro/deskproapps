@@ -1,0 +1,1 @@
+Every DeskPRO app must include a manifest which contains app properties like the title, storage permissions, and interactions with external APIs. The manifest values may be added to the _package.json_ file or a separate _manifest.json_ file.

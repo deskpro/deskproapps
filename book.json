@@ -7,7 +7,7 @@
         "custom-favicon",
         "scripts",
         "toolbar",
-        "include",
+        "include-it@git+https://github.com/headzoo/gitbook-plugin-include.git#master",
         "toc"
     ],
     "pluginsConfig": {
