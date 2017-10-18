@@ -11,13 +11,8 @@ This tutorial will walk you through creating a simple DeskPRO app using jQuery. 
 ----
 
 ## Step 1. Clone the boilerplate
+{% set projectDirectory = "jquery-tutorial" %}
 {% include "_boilerplate_summary.md" %}
-
-```
-git clone https://github.com/deskpro/deskproapps-boilerplate-react jquery-tutorial
-cd jquery-tutorial
-npm install
-```
 
 ## Step 2. Update the manifest
 Edit the app configuration in _package.json_, which can be found in the app root directory. Change the "title" property to "Participants".

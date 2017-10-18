@@ -17,13 +17,8 @@ To follow this tutorial you will need:
 ----
 
 ## Step 1. Clone the boilerplate
+{% set projectDirectory = "oauth-tutorial" %}
 {% include "_boilerplate_summary.md" %}
-
-```
-git clone https://github.com/deskpro/deskproapps-boilerplate-react oauth-tutorial
-cd oauth-tutorial
-npm install
-```
 
 ## Step 2. Configure the manifest
 Edit the app configuration in _package.json_, which can be found in the app root directory. Change the "title" property to "OAuth Tutorial". Also add the "storage" values shown below.

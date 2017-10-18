@@ -11,13 +11,8 @@ This tutorial will walk you through creating a DeskPRO app which uses oauth to a
 ----
 
 ## Step 1. Clone the boilerplate
+{% set projectDirectory = "oauth-tutorial" %}
 {% include "_boilerplate_summary.md" %}
-
-```
-git clone https://github.com/deskpro/deskproapps-boilerplate-react oauth-tutorial
-cd oauth-tutorial
-npm install
-```
 
 ## Step 2. Configure the manifest
 

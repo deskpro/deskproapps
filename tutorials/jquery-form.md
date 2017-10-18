@@ -11,13 +11,8 @@ This tutorial will walk you through creating a DeskPRO app which has two pages. 
 ----
 
 ## Step 1. Clone the boilerplate
+{% set projectDirectory = "form-tutorial" %}
 {% include "_boilerplate_summary.md" %}
-
-```
-git clone https://github.com/deskpro/deskproapps-boilerplate-react form-tutorial
-cd form-tutorial
-npm install
-```
 
 ## Step 2. Update the manifest
 Edit the app configuration in _package.json_, which can be found in the app root directory. Change the "title" property to "Form Tutorial".

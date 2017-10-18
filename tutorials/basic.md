@@ -11,13 +11,8 @@ This tutorial will walk you through creating a simple DeskPRO app which displays
 ----
 
 ## Step 1. Clone the boilerplate
+{% set projectDirectory = "basic-tutorial" %}
 {% include "_boilerplate_summary.md" %}
-
-```
-git clone https://github.com/deskpro/deskproapps-boilerplate-react basic-tutorial
-cd basic-tutorial
-npm install
-```
 
 ## Step 2. Update the manifest
 
