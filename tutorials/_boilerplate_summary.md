@@ -1,0 +1,1 @@
+The SDK boilerplate includes the basic app files and configuration, which helps developers get started writing apps.

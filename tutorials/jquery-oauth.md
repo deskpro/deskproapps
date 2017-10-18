@@ -2,7 +2,7 @@ Overview
 ========
 This tutorial will walk you through creating a DeskPRO app which uses oauth to authenticate with a remote service provider. This tutorial will use [GitHub](https://github.com/) as an example.
 
-!INCLUDE "_oauth_overview.md"
+{% include "_oauth_overview.md" %}
 
 ----
 
@@ -17,7 +17,7 @@ To follow this tutorial you will need:
 ----
 
 ## Step 1. Clone the boilerplate
-The SDK boilerplate includes the basic app configuration and files to help developers get started writing apps.
+{% include "_boilerplate_summary.md" %}
 
 ```
 git clone https://github.com/deskpro/deskproapps-boilerplate-react oauth-tutorial
@@ -352,7 +352,7 @@ Finally the app is displayed.
 
 
 ## Step 4. Run the dev server
-!INCLUDE "_dev_server.md"
+{% include "_dev_server.md" %}
 
 ## Step 5. Deploy the app
-!INCLUDE "_deploy_app.md"
+{% include "_deploy_app.md" %}

@@ -6,12 +6,12 @@ This tutorial will walk you through creating a DeskPRO app which has two pages. 
 
 ----
 
-!INCLUDE "_prerequisites.md"
+{% include "_prerequisites.md" %}
 
 ----
 
 ## Step 1. Clone the boilerplate
-The SDK boilerplate includes the basic app configuration and files to help developers get started writing apps.
+{% include "_boilerplate_summary.md" %}
 
 ```
 git clone https://github.com/deskpro/deskproapps-boilerplate-react form-tutorial
@@ -258,7 +258,7 @@ $appContainer.show();
 The is fully initialized and all events bound. At this point the app can be unhidden.
 
 ## Step 4. Run the dev server
-!INCLUDE "_dev_server.md"
+{% include "_dev_server.md" %}
 
 ## Step 5. Deploy the app
-!INCLUDE "_deploy_app.md"
+{% include "_deploy_app.md" %}
