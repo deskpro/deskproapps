@@ -1,6 +1,6 @@
 Overview
 ========
-This tutorial will walk you through creating a DeskPRO app which has two pages. One page with a settings form and one page which displays the form values. [App storage](/api/props/storage.md) will be used to save the values, and the [route object](/api/props/route.md) will be used to switch between the two pages.
+This tutorial will walk you through creating a DeskPRO app which has two pages. One page with a settings form and one page which displays the form values. [App storage](/api/props/storage.md) will be used to save the values, and jQuery will be used to switch between the two pages.
 
 ![screenshot](/images/tutorials/form-1.png)
 
@@ -250,7 +250,7 @@ Binds a callback to the settings form `submit` event. The callback converts the 
 $appContainer.show();
 ```
 
-The is fully initialized and all events bound. At this point the app can be unhidden.
+The app is fully initialized and all events bound. At this point the app can be unhidden.
 
 ## Step 4. Run the dev server
 {% include "_dev_server.md" %}
