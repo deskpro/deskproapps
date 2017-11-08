@@ -52,7 +52,7 @@ Edit the app component to look like the following code.
 {% label %}src/main/javascript/App.jsx{% endlabel %}
 ```jsx
 import React from 'react';
-import { Container, Avatar } from 'deskpro-components';
+import { Container, Avatar } from '@deskpro/react-components';
 
 export default class App extends React.Component {
   render() {
@@ -92,8 +92,8 @@ Modify the stylesheet to look like the following.
 
 {% label %}src/main/sass/index.scss{% endlabel %}
 ```sass
-$dp-styles-font-path: "~deskpro-components/src/styles/fonts/";
-@import "~deskpro-components/src/styles/main.scss";
+$dp-styles-font-path: "~@deskpro/react-components/src/styles/fonts/";
+@import "~@deskpro/react-components/src/styles/main.scss";
 
 .participants-list {
   list-style-type: none;

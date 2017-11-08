@@ -9,6 +9,7 @@ Creating rich DeskPRO apps is quick and easy using the React SDK.
 
 ```jsx
 import React from 'react';
+import { sdkConnect } from '@deskpro/apps-sdk-react';
 
 const App = ({ tabData }) => (
   <ul>
@@ -26,7 +27,7 @@ const App = ({ tabData }) => (
   </ul>
 );
 
-export default App;
+export default sdkConnect(App);
 ```
 
 ![screenshot](/images/tutorials/basic-1.png)

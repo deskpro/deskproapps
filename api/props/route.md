@@ -13,7 +13,7 @@ The following example uses a `switch` statement to display a different page depe
 
 ```js
 import React from 'react';
-import { sdkConnect } from 'deskpro-sdk-react';
+import { sdkConnect } from '@deskpro/apps-sdk-react';
 import PageAccount from './PageAccount';
 import PageIndex from './PageIndex';
 
@@ -52,8 +52,8 @@ The following example renders two pages. An "index" page with a form where a not
 ```jsx
 // PageIndex.jsx
 import React from 'react';
-import { sdkConnect } from 'deskpro-sdk-react';
-import { Form, Input, Button } from 'deskpro-components/lib/bindings/redux-form';
+import { sdkConnect } from '@deskpro/apps-sdk-react';
+import { Form, Input, Button } from '@deskpro/react-components/lib/bindings/redux-form';
 
 class PageIndex extends React.Component {
     /**
@@ -89,7 +89,7 @@ export default sdkConnect(PageIndex);
 ```jsx
 // PageNote.jsx
 import React from 'react';
-import { sdkConnect } from 'deskpro-sdk-react';
+import { sdkConnect } from '@deskpro/apps-sdk-react';
 
 class PageNote extends React.Component {
     /**
@@ -126,7 +126,7 @@ The [Routes](/components/routes.md) and [Route](/components/route.md) components
 ```jsx
 // App.jsx
 import React from 'react';
-import { Routes, Route } from 'deskpro-sdk-react';
+import { Routes, Route } from '@deskpro/apps-sdk-react';
 import PageNote from './PageNote';
 import PageIndex from './PageIndex';
 import PageNotFound from './PageNotFound';
@@ -148,7 +148,7 @@ Connected components may also change the location using the [Link](/components/l
 
 ```js
 import React from 'react';
-import { sdkConnect, Link, LinkButton } from 'deskpro-sdk-react';
+import { sdkConnect, Link, LinkButton } from '@deskpro/apps-sdk-react';
 
 class Menu extends React.Component {
     render() {

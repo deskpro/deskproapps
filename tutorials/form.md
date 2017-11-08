@@ -60,9 +60,9 @@ Create a new component with a form.
 {% label %}src/main/javascript/PageForm.jsx{% endlabel %}
 ```jsx
 import React from 'react';
-import { sdkConnect } from 'deskpro-sdk-react';
-import { Container } from 'deskpro-components';
-import { Form, Input, Button } from 'deskpro-components/lib/bindings/redux-form';
+import { sdkConnect } from '@deskpro/apps-sdk-react';
+import { Container } from '@deskpro/react-components';
+import { Form, Input, Button } from '@deskpro/react-components/lib/bindings/redux-form';
 
 class PageForm extends React.Component {
   /**
@@ -115,7 +115,7 @@ export default sdkConnect(PageForm);
 
 #### Explanation
 
-The form uses components from the [deskpro-components](https://github.com/deskpro/deskpro-components) library, which is included in the boilerplate by default.
+The form uses components from the [d@deskpro/react-components](https://github.com/deskpro/react-components) library, which is included in the boilerplate by default.
 
 The [this.props.storage.onSubmitApp](/api/props/storage.md) function is passed to the form `onSubmit` handler to automatically save the submitted form values to app storage. The function saves the form values to the DeskPRO database using the form `name` prop ("settings") as the storage key. See the [storage documentation](/api/props/storage.md) for more information.
 
@@ -143,8 +143,8 @@ Create a new component to display the form values.
 {% label %}src/main/javascript/PageIndex.jsx{% endlabel %}
 ```jsx
 import React from 'react';
-import { LinkButton, sdkConnect } from 'deskpro-sdk-react';
-import { Container } from 'deskpro-components';
+import { LinkButton, sdkConnect } from '@deskpro/apps-sdk-react';
+import { Container } from '@deskpro/react-components';
 
 class PageIndex extends React.Component {
   /**
@@ -197,8 +197,8 @@ Edit the app component to look like the following code.
 {% label %}src/main/javascript/App.jsx{% endlabel %}
 ```jsx
 import React from 'react';
-import { Routes, Route } from 'deskpro-sdk-react';
-import { Container } from 'deskpro-components';
+import { Routes, Route } from '@deskpro/apps-sdk-react';
+import { Container } from '@deskpro/react-components';
 import PageForm from './PageForm';
 import PageIndex from './PageIndex';
 

@@ -17,7 +17,7 @@ The `DeskproSDK` component bootstraps the app and [connects it to the SDK](/page
 {% label %}index.js{% endlabel %}
 ```jsx
 import ReactDOM from 'react-dom';
-import { DeskproSDK, configureStore } from 'deskpro-sdk-react';
+import { DeskproSDK, configureStore } from '@deskpro/apps-sdk-react';
 
 const store = configureStore(dpapp);
 
@@ -36,7 +36,7 @@ The app component may also be passed to `DeskproSDK` via the `component` prop.
 {% label %}index.js{% endlabel %}
 ```jsx
 import ReactDOM from 'react-dom';
-import { DeskproSDK, configureStore } from 'deskpro-sdk-react';
+import { DeskproSDK, configureStore } from '@deskpro/apps-sdk-react';
 
 const store = configureStore(dpapp);
 

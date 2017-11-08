@@ -25,8 +25,8 @@ The following example renders a form with a list of countries. The component use
 
 ```jsx
 import React from 'react';
-import { sdkConnect } from 'deskpro-sdk-react';
-import { Form, Select, Button } from 'deskpro-components/lib/bindings/redux-form';
+import { sdkConnect } from '@deskpro/apps-sdk-react';
+import { Form, Select, Button } from '@deskpro/react-components/lib/bindings/redux-form';
 
 class PageCountry extends React.Component {
     /**
@@ -87,8 +87,8 @@ The following example allows agents to attach notes to the opened ticket. It sho
 
 ```jsx
 import React from 'react';
-import { sdkConnect } from 'deskpro-sdk-react';
-import { Form, Textarea, Button } from 'deskpro-components/lib/bindings/redux-form';
+import { sdkConnect } from '@deskpro/apps-sdk-react';
+import { Form, Textarea, Button } from '@deskpro/react-components/lib/bindings/redux-form';
 
 class Notes extends React.Component {
     /**
@@ -150,8 +150,8 @@ The following example uses `this.props.storage.onSubmitApp` to automatically sav
 
 ```jsx
 import React from 'react';
-import { sdkConnect } from 'deskpro-sdk-react';
-import { Form, Input, Button } from 'deskpro-components/lib/bindings/redux-form';
+import { sdkConnect } from '@deskpro/apps-sdk-react';
+import { Form, Input, Button } from '@deskpro/react-components/lib/bindings/redux-form';
 
 class PageSettings extends React.Component {
   render() {

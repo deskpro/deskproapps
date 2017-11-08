@@ -7,7 +7,7 @@ The SDK store is created by the `configureStore()` function, and the store objec
 
 ```js
 import ReactDOM from 'react-dom';
-import { DeskproSDK, configureStore } from 'deskpro-sdk-react';
+import { DeskproSDK, configureStore } from '@deskpro/apps-sdk-react';
 
 const store = configureStore(dpapp);
 
@@ -25,7 +25,7 @@ export function runApp(dpapp) {
 The store may be configured with additional middleware by passing an array of functions as the second argument to `configureStore()`.
 
 ```js
-import { configureStore } from 'deskpro-sdk-react';
+import { configureStore } from '@deskpro/apps-sdk-react';
 import logger from 'redux-logger';
 import analytics from 'redux-analytics';
 
@@ -39,7 +39,7 @@ const store = configureStore(dpapp, [logger, analytics]);
 Additional reducers may also be passed to the `configureStore()` function.
 
 ```js
-import { configureStore } from 'deskpro-sdk-react';
+import { configureStore } from '@deskpro/apps-sdk-react';
 
 const customReducer = (state, action) => {
     return state;
@@ -55,7 +55,7 @@ const store = configureStore(dpapp, {
 Initial state for the custom reducers may also be passed to the `configureStore()` function.
 
 ```js
-import { configureStore } from 'deskpro-sdk-react';
+import { configureStore } from '@deskpro/apps-sdk-react';
 
 const customReducer = (state, action) => {
     return state;
@@ -74,7 +74,7 @@ The following example uses middleware, reducers, and initial state.
 {% label %}src/main/javascript/index.js{% endlabel %}
 ```js
 import ReactDOM from 'react-dom';
-import { DeskproSDK, configureStore } from 'deskpro-sdk-react';
+import { DeskproSDK, configureStore } from '@deskpro/apps-sdk-react';
 import logger from 'redux-logger';
 import analytics from 'redux-analytics';
 
@@ -105,9 +105,9 @@ Components which have been [connected to the SDK](/api/props/connecting.md) will
 {% label %}src/main/javascript/PageSettings.jsx{% endlabel %}
 ```jsx
 import React from 'react';
-import { sdkConnect } from 'deskpro-sdk-react';
-import { Container } from 'deskpro-components';
-import { Form, Input, Button } from 'deskpro-components/lib/bindings/redux-form';
+import { sdkConnect } from '@deskpro/apps-sdk-react';
+import { Container } from '@deskpro/react-components';
+import { Form, Input, Button } from '@deskpro/react-components/lib/bindings/redux-form';
 
 class PageSettings extends React.Component {
   /**

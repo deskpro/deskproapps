@@ -24,7 +24,7 @@ First create a few pages for the app.
 {% label %}PageSettings.jsx{% endlabel %}
 ```jsx
 import React from 'react';
-import { Link, sdkConnect } from 'deskpro-sdk-react';
+import { Link, sdkConnect } from '@deskpro/apps-sdk-react';
 
 const PageSettings = () => (
     <div>
@@ -41,7 +41,7 @@ export default sdkConnect(PageSettings);
 {% label %}PageIndex.jsx{% endlabel %}
 ```jsx
 import React from 'react';
-import { Link, sdkConnect } from 'deskpro-sdk-react';
+import { Link, sdkConnect } from '@deskpro/apps-sdk-react';
 
 const PageSettings = () => (
     <div>
@@ -76,7 +76,7 @@ Now create the main app component which contains the `Routes`. The `Route` which
 {% label %}App.jsx{% endlabel %}
 ```jsx
 import React from 'react';
-import { Routes, Route, sdkConnect } from 'deskpro-sdk-react';
+import { Routes, Route, sdkConnect } from '@deskpro/apps-sdk-react';
 import PageSettings from './PageSettings';
 import PageIndex from './PageIndex';
 import PageNotFound from './PageNotFound';
@@ -119,7 +119,7 @@ Call `this.props.route.to()` to manually change the route.
 {% label %}PageSettings.jsx{% endlabel %}
 ```jsx
 import React from 'react';
-import { sdkConnect } from 'deskpro-sdk-react';
+import { sdkConnect } from '@deskpro/apps-sdk-react';
 
 class PageSettings extends Route.Component {
     handleClick = () => {

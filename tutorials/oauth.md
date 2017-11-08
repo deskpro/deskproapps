@@ -59,8 +59,8 @@ Create a new component with a form.
 {% label %}src/main/javascript/PageSettings.jsx{% endlabel %}
 ```jsx
 import React from 'react';
-import { sdkConnect } from 'deskpro-sdk-react';
-import { Form, Input, Button } from 'deskpro-components/lib/bindings/redux-form';
+import { sdkConnect } from '@deskpro/apps-sdk-react';
+import { Form, Input, Button } from '@deskpro/react-components/lib/bindings/redux-form';
 
 class PageSettings extends React.PureComponent {
   /**
@@ -134,7 +134,7 @@ Create a new component to display the oauth access token.
 {% label %}src/main/javascript/PageIndex.jsx{% endlabel %}
 ```jsx
 import React from 'react';
-import { sdkConnect } from 'deskpro-sdk-react';
+import { sdkConnect } from '@deskpro/apps-sdk-react';
 
 class PageIndex extends React.Component {
   /**

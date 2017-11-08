@@ -19,7 +19,7 @@ The following example renders two links which change the current location when c
 
 ```jsx
 import React from 'react';
-import { Link, sdkConnect } from 'deskpro-sdk-react';
+import { Link, sdkConnect } from '@deskpro/apps-sdk-react';
 
 class Page extends React.Component {
     render() {

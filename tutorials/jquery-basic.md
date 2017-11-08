@@ -103,8 +103,8 @@ Modify the stylesheet to look like the following.
 
 {% label %}src/main/sass/index.scss{% endlabel %}
 ```sass
-$dp-styles-font-path: "~deskpro-components/src/styles/fonts/";
-@import "~deskpro-components/src/styles/main.scss";
+$dp-styles-font-path: "~@deskpro/react-components/src/styles/fonts/";
+@import "~@deskpro/react-components/src/styles/main.scss";
 
 .participants-list {
   list-style-type: none;

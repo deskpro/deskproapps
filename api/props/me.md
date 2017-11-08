@@ -6,7 +6,7 @@ An object which is populated with the details of the agent/admin using the app.
 
 ```js
 import React from 'react';
-import { sdkConnect } from 'deskpro-sdk-react';
+import { sdkConnect } from '@deskpro/apps-sdk-react';
 
 class Page extends React.Component {
     render() {

@@ -19,7 +19,7 @@ The following example renders two buttons which change the current location when
 
 ```jsx
 import React from 'react';
-import { LinkButton, sdkConnect } from 'deskpro-sdk-react';
+import { LinkButton, sdkConnect } from '@deskpro/apps-sdk-react';
 
 class Page extends React.Component {
     render() {

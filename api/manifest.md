@@ -35,9 +35,9 @@ The app configuration should be added to the _package.json_ file using the "desk
     "externalApis": []
   },
   "dependencies": {
-    "@deskproapps/deskproapps-sdk-core": "^1.0.0",
-    "deskpro-sdk-react": "^1.0.0",
-    "deskpro-components": "^1.0.0"
+    "@deskpro/apps-sdk-core": "^1.0.0",
+    "@deskpro/apps-sdk-react": "^0.1.5",
+    "@deskpro/react-components": "^1.0.0"
   }
 }
 ```
