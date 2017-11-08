@@ -31,6 +31,7 @@
     - [TabData](api/props/tabdata.md)
     - [Me](api/props/me.md)
     - [UI](api/props/ui.md)
+    - [Store](api/props/store.md)
 * [Components]()
     - [DeskproSDK](api/components/deskprosdk.md)
     - [Routes](api/components/routes.md)
