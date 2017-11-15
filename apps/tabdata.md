@@ -1,33 +1,6 @@
 TabData
 =======
-`this.props.tabData`
-
-An object which is populated with the details of the currently opened ticket.
-
-```js
-import React from 'react';
-import { sdkConnect } from '@deskpro/apps-sdk-react';
-
-class TicketInfo extends React.Component {
-    render() {
-        const { tabData } = this.props;
-        
-        return (
-            <ul>
-                <li>ID: {tabData.id}</li>
-                <li>Created: {tabData.date_created}</li>
-                <li>Subject: {tabData.subject}</li>
-            </ul>
-        );
-    }
-}
-
-export default sdkConnect(TicketInfo);
-```
-
-## Properties
-
-The object contains the following properties:
+An object which contains the details of the currently opened ticket. The object contains the following properties:
 
 ```js
 {
@@ -116,7 +89,7 @@ The object contains the following properties:
 }
 ```
 
-## Example
+## Example Data
 
 ```json
 {
@@ -1764,4 +1737,13 @@ The object contains the following properties:
     "field24":"Bratwurst",
     "field33":"Wed, 8th Nov 2017 7:48am"
 }
+```
+
+## Template Usage
+
+```twig
+<div class="entry">
+  <h1>{{agent.name}}</h1>
+  <p>{{agent.primary_email.email}}</p>
+</div>
 ```
