@@ -27,9 +27,9 @@ If you are not used to Travis, which is free to use for non-commercial projects,
 4. Add the .travis.yml file to git, commit and push, to trigger a Travis CI build.
 5. Check the [build status](https://travis-ci.org/) page to see if your build [passes or fails](https://docs.travis-ci.com/user/customizing-the-build/#Breaking-the-Build), according to the return status of the build command.
  
-## Setting up Github deployments
+## Setting up GitHub deployments
  
-We manage our releases on Github and we use [Travis](https://travis-ci.org/) to build our release artifacts for us. This is how your `.travis.yml` file should look like:
+We manage our releases on GitHub and we use [Travis](https://travis-ci.org/) to build our release artifacts for us. This is how your `.travis.yml` file should look like:
 
 ```yaml
 language: node_js

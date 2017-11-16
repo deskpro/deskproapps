@@ -8,6 +8,7 @@
 * [Common application use cases](guides/common_application.md)
 * [Running DeskPRO in dev mode](guides/deskpro_dev_mode.md)
 * [Setting up Travis](guides/travis.md)
+* [Testing](guides/testing.md)
 
 ### Tutorials
 * [React]()
