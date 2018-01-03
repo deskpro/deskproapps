@@ -119,6 +119,51 @@ class PageNote extends React.Component {
 export default sdkConnect(PageNote);
 ```
 
+### Events
+
+Use the `this.props.route.on()` method to listen for route change events, and `this.props.route.off()` to stop listening. Currently the "to" event is supported, which is triggered prior to changing the route.
+
+```js
+import React from 'react';
+import { sdkConnect } from '@deskpro/apps-sdk-react';
+import PageAccount from './PageAccount';
+import PageIndex from './PageIndex';
+
+class Content extends React.Component {
+    componentDidMount() {
+        const { route } = this.props;
+        
+        route.on('to', this.handleRouteTo);
+    }
+    
+    componentWillUnmount() {
+        const { route } = this.props;
+        
+        route.off('to', this.handleRouteTo);
+    }
+    
+    handleRouteTo = () => {
+        const { route } = this.props;
+        
+        console.log(`Changing to location ${route.location}.`);
+    };
+    
+    render() {
+        const { route } = this.props;
+        
+        switch (route.location) {
+          case 'account':
+            return <PageAccount />;
+          case 'index':
+            return <PageIndex />;
+        }
+    }
+}
+
+export default sdkConnect(Content);
+```
+
+
 ### Routes component
 
 The [Routes](/components/routes.md) and [Route](/components/route.md) components may be used in place of a `switch` statement.
